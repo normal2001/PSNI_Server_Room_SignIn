@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/view_banner" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:padding="20dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Edit Visit" android:textSize="28sp" android:textStyle="bold" android:gravity="center" android:layout_marginBottom="20dp" android:layout_marginTop="20dp" android:textColor="@color/standard_text"/>
+    <TextView android:id="@+id/personText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="26sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sign-in time (YYYY-MM-dd HH:mm:ss)" android:layout_marginTop="24dp" android:textStyle="bold" android:textSize="20sp" android:textColor="@color/standard_text"/>
+    <EditText android:id="@+id/signInInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sign-out time (YYYY-MM-dd HH:mm:ss)" android:layout_marginTop="24dp" android:textStyle="bold" android:textSize="20sp" android:textColor="@color/standard_text"/>
+    <EditText android:id="@+id/signOutInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Reason for visit" android:textStyle="bold" android:textSize="20sp" android:textColor="@color/standard_text"/>
+    <Spinner android:id="@+id/reasonSpinner" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" />
+    <TextView android:id="@+id/messageText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/red_message" android:textStyle="bold" android:textSize="24sp" android:gravity="center" android:visibility="gone" android:layout_marginTop="16dp" />
+    <Button android:id="@+id/submitButton" android:layout_width="match_parent" android:layout_height="50dp" android:text="Submit" android:layout_marginTop="30dp"  android:textColor="#FFF" android:textSize="22sp" android:backgroundTint="@color/banner_blue"/>
+    </LinearLayout>
+    <include layout="@layout/view_footer" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

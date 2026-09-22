@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_admin_passcode_warning">WARNING: Change admin passcode from default</string>
+    <string name="default_admin_passcode_not_allowed">1234 is not allowed as the admin passcode. Choose a different four-digit passcode.</string>
+    <string name="database_unavailable">Database unavailable. Check-in and check-out are paused. Open Settings, enter the admin passcode, and correct DATABASE_PATH in Application settings.</string>
+</resources>

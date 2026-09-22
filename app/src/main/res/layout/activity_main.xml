@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/view_banner" />
+
+    <TextView android:id="@+id/databaseWarning" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:text="@string/database_unavailable" android:textSize="20sp" android:textColor="@color/red_message" android:accessibilityLiveRegion="polite" android:visibility="gone" />
+
+    <TextView android:layout_width="match_parent" android:layout_height="220dp" android:gravity="center" android:paddingTop="60dp" android:text="Server Room Sign-In" android:textSize="72sp" android:textFontWeight="400" android:textColor="@color/standard_text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:text="\n\nAre you arriving or departing?"
+        android:textColor="@color/standard_text"
+        android:textFontWeight="400"
+        android:textSize="36sp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical" android:gravity="top|center_horizontal" android:paddingTop="60dp">
+        <Button android:id="@+id/signInButton" android:layout_width="280dp" android:layout_height="80dp" android:text="Check In" android:textSize="36sp" android:textColor="#FFF"  android:backgroundTint="@color/banner_blue"/>
+        <Space android:layout_width="1dp" android:layout_height="50dp" />
+        <Button android:id="@+id/signOutButton" android:layout_width="280dp" android:layout_height="80dp" android:text="Check Out" android:textSize="36sp" android:textColor="#FFF"  android:backgroundTint="@color/banner_blue"/>
+    </LinearLayout>
+    <include layout="@layout/view_footer" />
+</LinearLayout>

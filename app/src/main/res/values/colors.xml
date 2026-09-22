@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_message">#B00020</color>
+    <color name="dark_text">#000000</color>
+    <color name="light_gray">#C0C0D0</color>
+    <color name="banner_blue">#113365</color>
+    <color name="standard_text">#080816</color>
+</resources>

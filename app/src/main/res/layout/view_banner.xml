@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="100dp" android:background="@color/banner_blue" android:paddingTop="28dp" android:paddingBottom="10dp">
+    <ImageView android:layout_width="wrap_content" android:layout_height="64dp" android:layout_gravity="center" android:adjustViewBounds="true" android:contentDescription="PSNI" android:src="@drawable/psniwhite" />
+    <ImageButton android:id="@+id/homeButton" android:layout_width="52dp" android:layout_height="52dp" android:layout_gravity="start|center_vertical" android:layout_marginStart="12dp" android:background="?android:attr/selectableItemBackgroundBorderless" android:contentDescription="Home" android:src="@drawable/ic_home" />
+    <ImageButton android:id="@+id/settingsButton" android:layout_width="52dp" android:layout_height="52dp" android:layout_gravity="end|center_vertical" android:layout_marginEnd="12dp" android:background="?android:attr/selectableItemBackgroundBorderless" android:contentDescription="Admin settings" android:src="@drawable/ic_settings" />
+</FrameLayout>

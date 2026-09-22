@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/view_banner" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical" android:padding="20dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Admin Login" android:textSize="28sp" android:textStyle="bold" android:gravity="center" android:layout_marginBottom="30dp" android:layout_marginTop="20dp" android:textColor="@color/standard_text" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Enter passcode:" android:textSize="20sp" android:textStyle="bold" android:gravity="start" android:layout_margin="2dp" android:textColor="@color/standard_text" />
+    <EditText android:id="@+id/passcodeInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberPassword" android:maxLength="4"  android:textColor="@color/standard_text"/>
+    <TextView android:id="@+id/messageText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/red_message" android:textSize="24sp" android:textStyle="bold" android:gravity="center" android:visibility="gone" android:layout_marginTop="16dp" />
+    <Button android:id="@+id/loginButton" android:layout_width="match_parent" android:layout_height="50dp" android:text="Login" android:layout_marginTop="20dp" android:textSize="22sp" android:textColor="#FFF"  android:backgroundTint="@color/banner_blue" />
+    </LinearLayout>
+    <include layout="@layout/view_footer" />
+</LinearLayout>

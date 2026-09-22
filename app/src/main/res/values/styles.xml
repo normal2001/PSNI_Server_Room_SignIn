@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PSNISignIn" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:fontFamily">Roboto</item>
+        <item name="android:colorAccent">#464855</item>
+        <item name="android:buttonStyle">@style/PSNIButton</item>
+        <item name="android:textColorPrimary">@color/standard_text</item>
+        <item name="android:textColorSecondary">@color/standard_text</item>
+        <item name="android:textColorTertiary">@color/standard_text</item>
+        <item name="android:textColorHint">@color/standard_text</item>
+        <item name="android:textColorLink">@color/standard_text</item>
+        <item name="android:editTextColor">@color/standard_text</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="PSNIButton" parent="@android:style/Widget.Material.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

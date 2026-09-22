@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_banner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/visitorsTab"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:text="Visitors"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/fileshareTab"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:text="Fileshare"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/applicationTab"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:text="Application"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/adminTab"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:text="Admin"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Existing visitor-list content, intentionally left visually unchanged. -->
+        <LinearLayout
+            android:id="@+id/visitorsSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/rangeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:padding="10dp"
+
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/messageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/red_message"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:textSize="20sp">
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:textSize="20sp">
+                    <TableLayout
+                        android:id="@+id/recordsTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="0,1,2,3"
+                        />
+                </ScrollView>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/fileshareSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Fileshare Settings" android:textSize="28sp" android:textStyle="bold" />
+                <CheckBox android:id="@+id/smbExportEnabledInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="SMB_EXPORT_ENABLED" android:textSize="20sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="SMB_HOST" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/smbHostInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textUri" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="SMB_DOMAIN" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/smbDomainInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="SMB_USERNAME" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/smbUsernameInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="SMB_PASSWORD" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/smbPasswordInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="SMB_SHARE_NAME" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/smbShareNameInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Export Sign-In sheet data to a CSV file" android:textSize="18sp" android:textStyle="bold" />
+                    <Button android:id="@+id/exportCsvButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="Export CSV" android:textAllCaps="false" />
+                </LinearLayout>
+                <Button android:id="@+id/saveFileshareButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="Save Fileshare Settings" android:textAllCaps="false" />
+                <TextView android:id="@+id/fileshareMessageText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:textSize="18sp" android:textStyle="bold" android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/applicationSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Application Settings" android:textSize="28sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="DATABASE_PATH" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/databasePathInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="AUDIT_LOG_PATH" android:textSize="18sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                    <EditText android:id="@+id/auditLogPathInput" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:inputType="text" />
+                    <Button android:id="@+id/viewAuditLogButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="View" android:textAllCaps="false" android:contentDescription="View audit log" />
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="ERROR_LOG_PATH" android:textSize="18sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                    <EditText android:id="@+id/errorLogPathInput" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:inputType="text" />
+                    <Button android:id="@+id/viewErrorLogButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="View" android:textAllCaps="false" android:contentDescription="View error log" />
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="TIMESTAMP_PATTERN" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/timestampPatternInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+                <Button android:id="@+id/saveApplicationButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="Save Application Settings" android:textAllCaps="false" />
+                <TextView android:id="@+id/applicationMessageText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:textSize="18sp" android:textStyle="bold" android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/adminSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Admin Settings" android:textSize="28sp" android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/defaultPasscodeWarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/default_admin_passcode_warning"
+                    android:textColor="@color/red_message"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:accessibilityLiveRegion="polite"
+                    android:visibility="gone" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="ADMIN_PASSCODE" android:textSize="18sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                    <EditText android:id="@+id/adminPasscodeInput" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginBottom="20dp" android:enabled="false" android:inputType="numberPassword" android:maxLength="4" />
+                    <Button android:id="@+id/changePasscodeButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="Change" android:textAllCaps="false" />
+                </LinearLayout>
+                <CheckBox android:id="@+id/slackNotificationsEnabledInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="SLACK_NOTIFICATIONS_ENABLED" android:textSize="20sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="SLACK_CHANNEL" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/slackChannelInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Channel name or ID" android:inputType="text" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="SLACK_BOT_TOKEN" android:textSize="18sp" android:textStyle="bold" />
+                <EditText android:id="@+id/slackBotTokenInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" />
+                <Button android:id="@+id/saveAdminButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="Save Admin Settings" android:textAllCaps="false" />
+                <TextView android:id="@+id/adminMessageText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:textSize="18sp" android:textStyle="bold" android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>
